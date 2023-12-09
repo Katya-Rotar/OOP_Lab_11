@@ -1,15 +1,13 @@
-﻿namespace Task_2
+﻿namespace Task_2.Models
 {
-    internal class Footman
+    internal class Footman: Soldier
     {
-        public string Name { get; }
-
         public Footman(string name)
+            : base(name)
         {
-            Name = name;
         }
 
-        public void RespondToAttack()
+        public override void RespondToAttack()
         {
             Console.WriteLine($"Footman {Name} is panicking!");
         }
